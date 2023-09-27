@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.card2 {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  
+}
+.box2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1.5s;
+}
+
+.content2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.name2 {
+  font-size: 25px;
+  color: #777;
+  z-index: 1;
+  transition: 1.5s;
+}
+
+.para2 {
+  font-size: 1em;
+  color: #777;
+  z-index: 1;
+  transition: 1.5s;
+}
+
+.anker2 {
+  position: relative;
+  display: inline-block;
+  padding: 20px 20px;
+  background: #777;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card2:hover .box2 {
+  transform: translateY(-50px);
+  background: linear-gradient(35deg, whitesmoke, #ffffff);
+  border-radius: 15;
+}
+
+.box2 .content2 h3,
+.box2 .content2 p {
+  color: #363636;
+  border-radius: 15;
+}
