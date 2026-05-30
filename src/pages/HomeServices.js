@@ -22,14 +22,20 @@ class HomeServices extends Component {
   handleModalShow = () => {
     this.setState({ modalShow: !this.state.modalShow });
   };
-  HandleLocation = async () => {
-    await navigator.geolocation.getCurrentPosition((position) => {
+  HandleLocation = () => {
+    if (!REACT_APP_IQ_URL || !REACT_APP_IQ_KEY) {
+      alert('Map service is not configured. Set REACT_APP_IQ_URL and REACT_APP_IQ_KEY.');
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+      const mapUrl = `${REACT_APP_IQ_URL}?key=${REACT_APP_IQ_KEY}&zoom=18&center=${lat},${lng}&format=jpg`;
+
       this.setState({
-        location: [position.coords.latitude, position.coords.longitude],
-      });
-      const url1 = `${REACT_APP_IQ_URL}?key=${REACT_APP_IQ_KEY}&zoom=18&center=${this.state.location}&format=jpg`;
-      axios.get(url1).then((mapResponse) => {
-        this.setState({ MapOfLocation: mapResponse.request.responseURL });
+        location: [lat, lng],
+        MapOfLocation: mapUrl,
       });
     });
   };

@@ -5,6 +5,15 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import fallbackMapImage from '../media/images/RoadService.jpg';
+
+const getMapImageSrc = (mapUrl) => {
+  if (typeof mapUrl === 'string' && mapUrl.startsWith('http')) {
+    return mapUrl;
+  }
+  return fallbackMapImage;
+};
+
 require('dotenv').config();
 class Requests extends Component {
   constructor(props) {
@@ -96,7 +105,15 @@ class Requests extends Component {
                   <>
                     <Col md={3}>
                       <Card style={{ width: '18rem' ,marginTop:50}}>
-                        <Card.Img variant='top' src={data.map} />
+                        <Card.Img
+                          variant='top'
+                          src={getMapImageSrc(data.map)}
+                          alt={`Location map for ${data.Pesron_Name}`}
+                          onError={(event) => {
+                            event.target.onerror = null;
+                            event.target.src = fallbackMapImage;
+                          }}
+                        />
                         <div class='border border-warning'>
                           <Card.Body>
                             <Card.Title>{data.Pesron_Name}</Card.Title>
