@@ -3,6 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RoadServiceMain from '../media/images/RoadService.jpg';
+import RoadServiceTow from '../media/images/HomeGrid1.jpg';
+import RoadServiceAssist from '../media/images/HomeSlider1.jpg';
 
 export default class RoadServiceContent extends Component {
   render() {
@@ -25,7 +28,8 @@ export default class RoadServiceContent extends Component {
             </Col>
             <Col xs={{ span: 4, offset: 0 }} md={{ span: 4, offset: 1 }}>
               <img
-                src='https://media.istockphoto.com/vectors/roadside-assistance-vector-id628095858'
+                src={RoadServiceMain}
+                alt='Roadside assistance service'
                 width='450px'
                 height='300px'
                 style={{borderRadius: '20px'}}
@@ -47,7 +51,8 @@ export default class RoadServiceContent extends Component {
             </Col>
             <Col xs={{ span: 4, offset: 0 }} md={{ span: 4, offset: 1 }}>
               <img
-                src='https://dealerimages.dealereprocess.com/image/upload/w_2136/1544533.jpg'
+                src={RoadServiceTow}
+                alt='Vehicle towing service'
                 width='450px'
                 height='300px'
                 style={{borderRadius: '20px'}}
@@ -70,7 +75,8 @@ export default class RoadServiceContent extends Component {
             </Col>
             <Col xs={{ span: 4, offset: 0 }} md={{ span: 4, offset: 1 }}>
               <img
-                src='https://aaaliving.acg.aaa.com/wp-content/uploads/2019/04/aaa-roadside-assistance-benefits-mobile.jpg'
+                src={RoadServiceAssist}
+                alt='Roadside assistance benefits'
                 width='450px'
                 height='300px'
                 style={{borderRadius: '20px'}}
