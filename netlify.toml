@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "16"
   CI = "false"
+  REACT_APP_SERVER = "https://seassis-backend.onrender.com"
 
 [[redirects]]
   from = "/*"
