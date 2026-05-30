@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeServiceMain from '../media/images/HomeGrid2.jpg';
+import HomeServiceWorker from '../media/images/HomeSlider1.jpg';
+import HomeServicePlumber from '../media/images/HomeSlider2.jpg';
 
 export default class HomeServiceContent extends Component {
   render() {
@@ -10,7 +13,8 @@ export default class HomeServiceContent extends Component {
           <Row>
             <Col xs={{ span: 3, offset: 0 }} md={{ span: 4, offset: 1 }}>
               <img
-                src='https://cdn-colla.nitrocdn.com/aGOFLQWREmkPcEuaJpGePQetRgHRrvYU/assets/static/optimized/rev-1e5b529/wp-content/uploads/2018/08/on-demand-home-services-main.jpg'
+                src={HomeServiceMain}
+                alt='On-demand home services'
                 width='450px'
                 height='300px'
                 style={{borderRadius: '20px'}}
@@ -35,7 +39,8 @@ export default class HomeServiceContent extends Component {
           <Row>
             <Col xs={{ span: 4, offset: 0 }} md={{ span: 4, offset: 1 }}>
               <img
-                src='https://img2.chinadaily.com.cn/images/201902/26/5c7495a8a3106c65fffbd6f8.jpeg'
+                src={HomeServiceWorker}
+                alt='Home service professional at work'
                 width='450px'
                 height='300px'
                 style={{borderRadius: '20px'}}
@@ -58,7 +63,8 @@ export default class HomeServiceContent extends Component {
           <Row>
             <Col xs={{ span: 2, offset: 0 }} md={{ span: 4, offset: 1 }}>
               <img
-                src='http://jungleworks.com/wp-content/uploads/2018/02/yourstory-plumbers.jpg'
+                src={HomeServicePlumber}
+                alt='Plumber fixing household plumbing'
                 width='450px'
                 height='300px'
                 style={{borderRadius: '20px'}}
